@@ -1,5 +1,20 @@
+@font-face {
+	font-family: "GL Kirovi";
+	src: url(../font/GLKirovi-Bold.ttf);
+
+}
+
+@font-face {
+	font-family: "GL Tatishvili Metal";
+	src: url(../font/gl-tatishvili-metal-bold.ttf);
+}
+
+
+
+
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: GL Kirovi;
   background-color: #f8f9fa;
 }
 
@@ -79,7 +94,13 @@ nav ul li a {
   transition: transform 0.3s ease;
   margin-bottom: 30px;
 }
-
+.myh1{
+  display: flex;
+  font-size: 40px;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .card:hover {
   transform: scale(1.05);
 }
@@ -93,7 +114,7 @@ nav ul li a {
 .card h3 {
   margin: 10px;
   color: #6C757D;
-  font-family: Lora, serif;
+  font-family: GL Kirovi;
   font-size: 14px;
   font-weight: 400;
 }
@@ -101,24 +122,150 @@ nav ul li a {
 .card p {
   margin: 10px;
   color: #495057;
-  font-family: Lora, serif;
+  font-family: GL Kirovi;
   font-size: 16px;
   font-weight: 700;
 }
-
-/* Footer */
-footer {
-  background-color: #333;
+.footer {
+  background-color: #212529;
   color: #fff;
-  padding: 1rem;
+  padding: 40px 0;
   text-align: center;
 }
 
-.footer-content {
+.footer-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo img {
+  width: 150px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.footer-connections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-connections h3 {
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+
+.hero {
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.hero-text {
+  position: absolute;
+  color: #222222;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+main {
+  padding: 20px;
+}
+
+
+
+.content {
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+.related-posts {
+  text-align: center;
+}
+
+.related-posts h2 {
+  margin-bottom: 20px;
+}
+
+.related-posts .card {
+  display: inline-block;
+  width: 30%;
+  margin: 0 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+  
+  /* Responsive Styles */
+  @media (min-width: 600px) {
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 20px;
+    }
+  
+    .footer-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer-logo,
+    .footer-links,
+    .footer-connections {
+      margin-bottom: 0;
+    }
+  
+    .footer-connections {
+      align-items: flex-end;
+    }
+  }
+  
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -149,5 +296,23 @@ footer {
   .footer-content {
       flex-direction: column;
       align-items: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .footer-logo {
+    margin-bottom: 0;
+  }
+
+  .footer-links,
+  .footer-social {
+    margin-bottom: 0;
   }
 }
