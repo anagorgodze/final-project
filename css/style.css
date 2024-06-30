@@ -425,9 +425,8 @@ main {
 .button1:hover {
   background-color: #0056b3;
 }
+
 /* Responsive Design */
-
-
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
